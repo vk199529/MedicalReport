@@ -33,7 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        @if(Auth::guard('admin')->check())
+                 <li><a href="{{ route('admin.logout') }}">Logout</a></li>
+                 @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
